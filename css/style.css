@@ -1,0 +1,1021 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* ############# Reset #############*/
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   line-height: 1.6;
+   /* outline: 0.0625rem solid #000; */
+}
+
+body {
+   font-family: "Poppins", sans-serif;
+   height: 100%;
+   width: 100%;
+   color: #333;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+img {
+   display: block;
+   width: 100%;
+}
+
+a {
+   color: inherit;
+}
+
+::-webkit-scrollbar {
+   width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: #20c997;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: #11523e;
+   border-radius: 3.125rem;
+}
+
+::selection {
+   background-color: #20c997;
+   color: #fff;
+}
+/* ############# End Reset #############*/
+
+/* ############# Container #############*/
+.container {
+   padding: 0 1rem;
+   margin: auto;
+}
+
+@media screen and (min-width: 576px) {
+   .container {
+      width: 540px;
+   }
+}
+@media screen and (min-width: 768px) {
+   .container {
+      width: 720px;
+   }
+}
+@media screen and (min-width: 992px) {
+   .container {
+      width: 960px;
+   }
+}
+@media screen and (min-width: 1200px) {
+   .container {
+      width: 1140px;
+   }
+}
+@media screen and (min-width: 1400px) {
+   .container {
+      width: 1320px;
+   }
+}
+/* ############# End Container #############*/
+
+/* ###### Title ###### */
+.title {
+   text-align: center;
+   position: relative;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5rem 0;
+}
+
+.title h3 {
+   position: relative;
+   font-size: 2.5rem;
+}
+
+.title h3::after {
+   content: "";
+   position: absolute;
+   top: 90%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 6.25rem;
+   height: 0.125rem;
+   background-color: #20c997;
+}
+
+.title h2 {
+   position: absolute;
+   z-index: -1;
+   text-transform: uppercase;
+   font-size: 8.75rem;
+   opacity: 0.5;
+   color: #dee3e4;
+}
+/* ###### End Title ###### */
+/* <!-- ==================== Fixed Item  ====================--> */
+.setting {
+   all: unset;
+   width: 2.5rem;
+   height: 2.5rem;
+   font-size: 1.25rem;
+   background-color: rgb(65, 67, 70);
+   border-radius: 0.3125rem 0 0 0.3125rem;
+   color: #fff;
+   position: fixed;
+   top: 40%;
+   right: 0;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   box-shadow: 0 0 0.3125rem rgb(0 0 0 / 0.7);
+}
+
+.up {
+   position: fixed;
+   z-index: 9;
+   bottom: 0.625rem;
+   right: 0.625rem;
+   width: 2.5rem;
+   height: 2.5rem;
+   border-radius: 50%;
+   background-color: #ededed;
+   box-shadow: 0 0 0.3125rem rgb(0 0 0 / 0.7);
+   color: #000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/* <!-- ====================  End Fixed Item  ====================--> */
+/* <!-- ==================== Navbar  ====================--> */
+.navbar {
+   position: fixed;
+   z-index: 999;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 5rem;
+   padding: 0 1.25rem;
+   display: flex;
+   align-items: center;
+   background-color: #333232;
+}
+.icon{
+   width: 5%;
+   position: absolute;
+   top: 0%;
+   right: 0%;
+   font-size: 18px;
+   Font-weight: 400;
+   line-height: 26px;
+   color: white;
+   margin: 20px 7px 20px 0px  ;
+   }
+   .icon i {
+       padding: 6px ;
+   }
+   .icon i:hover{
+       color: rgb(0, 172, 238);
+   }
+
+.navbar ul.nav-menu {
+   gap: 1.25rem;
+   display: flex;
+   align-items: center;
+   margin: 0 auto;
+}
+
+.navbar ul a {
+   color: #fff;
+   display: block;
+}
+
+.navbar #menu {
+   display: none;
+}
+
+.navbar .menu-icon {
+   display: none;
+   font-size: 1.25rem;
+   color: #fff;
+   margin-left: auto;
+   cursor: pointer;
+}
+/* <!-- ====================End Navbar  ====================--> */
+
+/* <!-- ==================== Landing  ====================--> */
+
+.landing {
+   background: url("../images/home.jpg") center / cover no-repeat;
+}
+
+.landing .layer {
+   background-color: rgb(0 0 0 / 0.7);
+}
+
+.landing .layer .container {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   font-size: 1.5625rem;
+   text-align: center;
+}
+
+.landing .layer .container h1 {
+   font-size: 3.75rem;
+   position: relative;
+}
+
+.landing .layer .container h1::after {
+   content: "";
+   animation: type 7s linear infinite;
+}
+
+.landing .landing-content a {
+   color: #20c997;
+   font-size: 1rem;
+   display: inline-block;
+   padding: 0.9375rem 3.125rem;
+   border: 0.125rem solid #20c997;
+   margin-top: 20px;
+   border-radius: 3.125rem;
+   transition: color 0.7s, background-color 0.7s;
+}
+
+.landing .landing-content a:hover {
+   color: #fff;
+   background-color: #20c997;
+}
+
+.landing .landing-content {
+   margin: auto 0;
+}
+
+.landing .go-down {
+   transform: translateY(-40px);
+   opacity: 0;
+   animation: bounce 1.2s linear infinite;
+}
+
+@keyframes bounce {
+   50% {
+      transform: translateY(-20px);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(-5px);
+      opacity: 1;
+   }
+}
+
+@keyframes type {
+   0% {
+      content: "P";
+   }
+   3% {
+      content: "Ph";
+   }
+   6% {
+      content: "Pho";
+   }
+   9% {
+      content: "Phot";
+   }
+   12% {
+      content: "Photo";
+   }
+   15% {
+      content: "Photog";
+   }
+   18% {
+      content: "Photogr";
+   }
+   21% {
+      content: "Photograp";
+   }
+   24% {
+      content: "Photograph";
+   }
+   27% {
+      content: "Photographe";
+   }
+   30% {
+      content: "Photographer";
+   }
+   33% {
+      content: "Photographe";
+   }
+   36% {
+      content: "Photograph";
+   }
+   39% {
+      content: "Photograp";
+   }
+   42% {
+      content: "Photogra";
+   }
+   45% {
+      content: "Photogr";
+   }
+   47% {
+      content: "Photog";
+   }
+   49% {
+      content: "Photo";
+   }
+   52% {
+      content: "Phot";
+   }
+   55% {
+      content: "Pho";
+   }
+   58% {
+      content: "Ph";
+   }
+   61% {
+      content: "P";
+   }
+   64% {
+      content: "P";
+   }
+   67% {
+      content: "D";
+   }
+   70% {
+      content: "De";
+   }
+   73% {
+      content: "Des";
+   }
+   76% {
+      content: "Desi";
+   }
+   79% {
+      content: "Desig";
+   }
+   82% {
+      content: "Design";
+   }
+   85% {
+      content: "Designe";
+   }
+   88% {
+      content: "Designer";
+   }
+   91% {
+      content: "Designe";
+   }
+   92% {
+      content: "Design";
+   }
+   94% {
+      content: "Desig";
+   }
+   96% {
+      content: "Desi";
+   }
+   98% {
+      content: "Des";
+   }
+   99% {
+      content: "De";
+   }
+   100% {
+      content: "D";
+   }
+}
+
+/* <!-- ==================== End Landing  ====================--> */
+
+/* <!-- ==================== About  ====================--> */
+.about {
+   padding: 5rem 0;
+}
+
+.about .about-area {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 1.25rem;
+   align-items: baseline;
+   margin-top: 3.125rem;
+}
+
+.about .about-area .about-text {
+   width: calc(70% - 2.5rem);
+}
+
+.about .about-area .about-text h3 {
+   font-size: 1.625rem;
+}
+
+.about .about-area .about-text h3 span {
+   color: #20c997;
+}
+
+.about .about-area .about-text p {
+   padding: 1.25rem 0;
+}
+
+.about .about-area .about-list {
+   width: 30%;
+}
+
+.about .about-area .about-list li {
+   padding-bottom: 0.625rem;
+   margin-bottom: 0.9375rem;
+   letter-spacing: 0.125rem;
+   font-size: 1.125rem;
+}
+
+.about .about-area .about-list li:not(:last-child) {
+   border-bottom: 0.0625rem dashed #aaa;
+}
+
+.about .about-area .about-list li span {
+   font-weight: 900;
+}
+
+.about .about-area .about-list a.download {
+   display: inline-block;
+   background-color: #20c997;
+   color: #fff;
+   padding: 0.9375rem 3.125rem;
+   border-radius: 3.125rem;
+   transition: background-color 0.5s;
+}
+
+.about .about-area .about-list a.download:hover {
+   background-color: #11523e;
+}
+
+.about .about-counter {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 1.25rem;
+}
+
+.about .about-counter .item {
+   width: calc((100% - 1.875rem) / 4);
+   text-align: center;
+   font-size: 1.5625rem;
+   margin-top: 3.125rem;
+   color: #999;
+}
+
+.about .about-counter .item:not(:last-child) {
+   border-right: 0.0625rem dashed #aaa;
+}
+
+/* <!-- ==================== End About  ====================--> */
+
+/* <!-- ==================== What I Do  ====================--> */
+.services {
+   padding: 5rem 0;
+   background-color: rgb(248, 249, 250);
+}
+
+.services .services-area {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 2.5rem;
+}
+
+.services .services-area .card {
+   width: calc((100% - 2.5rem) / 2);
+   display: flex;
+   gap: 1.25rem;
+}
+
+.services .services-area .card h3 {
+   font-size: 1.875rem;
+   line-height: 1;
+   font-weight: 500;
+}
+
+.services .services-area .card .card-icon {
+   flex-shrink: 0;
+   width: 4.375rem;
+   height: 4.375rem;
+   border-radius: 0.3125rem;
+   background-color: #fff;
+   color: #20c997;
+   box-shadow: 0 0 0.3125rem rgb(0 0 0 / 0.7);
+   font-size: 1.5625rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.services .services-area .card p {
+   padding: 0.625rem 0;
+   width: 80%;
+}
+/* <!-- ==================== End What I Do  ====================--> */
+
+/* <!-- ==================== Resume  ====================--> */
+.resume {
+   padding: 5rem 0;
+}
+
+.resume .resume-area {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   row-gap: 2.5rem;
+   margin-top: 3.125rem;
+}
+
+.resume .resume-area .res-edu,
+.resume .resume-area .res-exp {
+   width: calc((100% - 2.5rem) / 2);
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+}
+
+.resume .resume-area .card {
+   border: 0.0625rem solid #ededed;
+   border-radius: 0.3125rem;
+   padding: 1.25rem;
+}
+
+.resume .resume-area .card span {
+   background-color: #20c997;
+   display: inline-block;
+   padding: 0.3125rem 0.9375rem;
+   border-radius: 0.3125rem;
+   color: #fff;
+   font-size: 0.875rem;
+}
+.resume .resume-area .card h3 {
+   padding: 0.9375rem 0;
+   font-size: 1.25rem;
+}
+.resume .resume-area .card p.subtitle {
+   color: tomato;
+   padding-bottom: 0.9375rem;
+}
+.resume .skils h2 {
+   padding: 1.25rem 0;
+}
+
+.resume .skils .skils-area {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   row-gap: 1.25rem;
+}
+
+.resume .skils .skils-area .item {
+   width: calc((100% - 1.25rem) / 2);
+}
+
+.resume .skils .text {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.resume .skils .skils-area .progress {
+   border-radius: 3.125rem;
+   overflow: hidden;
+   background-color: #aaa;
+   height: 0.5rem;
+}
+
+.resume .skils .skils-area .inner-porg {
+   height: 100%;
+   background-color: #20c997;
+}
+
+.resume .skils a.down {
+   display: block;
+   width: fit-content;
+   margin: 1.875rem auto;
+   border: 0.125rem solid #222;
+   padding: 0.9375rem 1.875rem;
+   border-radius: 3.125rem;
+   color: #222;
+   font-weight: 700;
+   font-size: 1.25rem;
+   transition: color 0.5s, background-color 0.5s;
+}
+
+.resume .skils a.down:hover {
+   background-color: #222;
+   color: #fff;
+}
+/* <!-- ==================== End Resume  ====================--> */
+
+/* <!-- ==================== Portfolio  ====================--> */
+.portfolio {
+   padding: 5rem 0;
+   background-color: rgb(248, 249, 250);
+}
+
+.portfolio .gallary {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   row-gap: 1.25rem;
+}
+
+.portfolio .nav {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 3.125rem 0;
+   font-size: 1.25rem;
+}
+
+.portfolio .nav li a {
+   padding: 0 1rem;
+   transition: color 0.5s;
+}
+
+.portfolio .nav li a.active,
+.portfolio .nav li a:hover {
+   color: #20c997;
+   position: relative;
+}
+
+.portfolio .nav li a.active::before {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   height: 0.125rem;
+   background-color: #20c997;
+}
+
+.portfolio .gallary .item {
+   width: calc((100% - 3.125rem) / 3);
+   display: flex;
+   flex-direction: column;
+   gap: 1.5625rem;
+}
+
+.portfolio .gallary .item .image {
+   position: relative;
+   border-radius: 0.625rem;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.portfolio .gallary .item .layer {
+   position: absolute;
+   inset: 0;
+   background-color: rgb(0 0 0 / 0.7);
+   color: #fff;
+   opacity: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   transition: opacity 0.5s;
+}
+
+.portfolio .gallary .item .image:hover .layer {
+   opacity: 1;
+}
+
+.portfolio .gallary .item img {
+   transition: filter 0.5s 0.3s, transform 0.5s 0.5s;
+}
+
+.portfolio .gallary .item .image:hover img {
+   filter: blur(0.3125rem);
+   transform: scale(1.3);
+}
+
+/* <!-- ==================== End Portfolio  ====================--> */
+
+/* <!-- ==================== Client  ====================--> */
+.client {
+   padding: 5rem 0;
+}
+
+.client .client-area {
+   margin-top: 3.125rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 3.125rem;
+}
+
+.client .client-item {
+   width: calc((100% - 3.125rem) / 2);
+   padding: 2.8125rem;
+   border-radius: 0.625rem;
+   background-color: rgb(248, 249, 250);
+}
+
+.client .client-data {
+   display: flex;
+   align-items: center;
+   gap: 0.625rem;
+}
+
+.client .client-data img {
+   width: 5rem;
+   flex-shrink: 0;
+   border-radius: 50%;
+}
+
+.client .client-data .text p {
+   font-size: 0.875rem;
+}
+
+.client .client-info p {
+   padding: 1.875rem 0;
+}
+
+.client ul.stars {
+   display: flex;
+   gap: 0.3125rem;
+   color: gold;
+}
+
+.client .bulets {
+   text-align: center;
+}
+
+.client .bulets span {
+   display: inline-block;
+   margin-right: 0.625rem;
+   width: 0.75rem;
+   height: 0.75rem;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: #aaa;
+   margin-top: 1.875rem;
+   transition: background-color 0.7s;
+}
+
+.client .bulets span.active,
+.client .bulets span:hover {
+   outline: 0.0625rem solid #20c997;
+   outline-offset: 0.3125rem;
+   background-color: #20c997;
+}
+/* <!-- ==================== End Client  ====================--> */
+
+/* <!-- ==================== Contact  ====================--> */
+.contact {
+   padding: 5rem 0;
+   background-color: rgb(248, 249, 250);
+}
+
+.contact .contact-area {
+   margin-top: 3.125rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 1.875rem;
+}
+
+.contact .address {
+   width: 30%;
+}
+
+.contact .address address {
+   font-style: normal;
+   padding-bottom: 1.25rem;
+}
+
+.contact h3 {
+   padding: 1.25rem 0;
+   font-size: 1.875rem;
+   font-weight: 500;
+}
+
+.contact .contact-data {
+   width: calc(70% - 2.5rem);
+}
+
+.contact .info li {
+   padding-bottom: 1.25rem;
+}
+
+.contact .info li i {
+   color: #20c997;
+}
+
+.contact .info li a {
+   font-size: 0.8125rem;
+   color: #11523e;
+}
+
+.contact form {
+   display: flex;
+   justify-content: space-between;
+   row-gap: 1.875rem;
+   flex-wrap: wrap;
+}
+
+.contact form :is(input, textarea) {
+   display: block;
+   width: 100%;
+   padding: 1rem;
+   border-radius: 0.3125rem;
+   border: 0.0625rem solid #bce4d8;
+}
+
+.contact form :is(input, textarea):focus {
+   outline: none;
+   border-color: #0e7c5b;
+}
+
+.contact form textarea {
+   resize: vertical;
+   height: 10rem;
+}
+
+.contact form input:nth-child(-n + 2) {
+   width: calc((100% - 1.875rem) / 2);
+}
+
+.contact form button {
+   border: unset;
+   background-color: #20c997;
+   color: #fff;
+   padding: 0.9375rem 2.8125rem;
+   border-radius: 3.125rem;
+   box-shadow: 0 0 0.625rem rgb(0 0 0 / 0.7);
+   font-size: 1.25rem;
+   cursor: pointer;
+   margin: 1.25rem auto;
+   transition: background-color 0.5s;
+}
+
+.contact form button:hover {
+   background-color: #11523e;
+}
+/* <!-- ==================== End Contact  ====================--> */
+
+/* <!-- ==================== Copy Right  ====================--> */
+.copy-right {
+   padding: 5rem 0;
+}
+
+.copy-right .container {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.copy-right .container a:first-of-type {
+   margin-left: auto;
+   margin-right: 1rem;
+   position: relative;
+}
+
+.copy-right .container a:first-of-type::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: calc(100% + 0.5rem);
+   width: 0.0625rem;
+   height: 100%;
+   background-color: #aaa;
+}
+
+.copy-right h3 {
+   font-weight: 400;
+   font-size: 0.9375rem;
+}
+
+.copy-right .container a {
+   transition: color 0.5s;
+}
+
+.copy-right .container a:hover {
+   color: #20c997;
+}
+
+.copy-right .brdr {
+   width: 0.0625rem;
+}
+/* <!-- ==================== End Copy Right  ====================--> */
+
+/* <!-- ====================  Media [RWD] ====================--> */
+@media (max-width: 1199.98px) {
+   html {
+      font-size: 15px;
+   }
+}
+
+@media (max-width: 991.98px) {
+
+   html {
+      font-size: 13px;
+   }
+
+   .title h2 {
+      font-size: 4.375rem;
+   }
+
+   .about .about-area .about-text,
+   .about .about-area .about-list,
+   .services .services-area .card,
+   .client .client-item {
+      width: 100%;
+   }
+
+   .about .about-counter .item {
+      width: calc((100% - 1.875rem) / 2);
+   }
+}
+
+@media (max-width: 767.98px) {
+   .navbar .menu-icon {
+      display: block;
+   }
+
+   .navbar ul.nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+      background-color: #000;
+      height: 100vh;
+      display: none;
+   }
+
+   .navbar #menu:checked + ul.nav-menu {
+      display: flex;
+   }
+
+   .navbar ul.nav-menu li a {
+      background-color: #fff;
+      padding: 0.625rem 0;
+      color: #0e7c5b;
+   }
+
+   .resume .resume-area .res-edu,
+   .resume .resume-area .res-exp,
+   .resume .skils .skils-area .item,
+   .portfolio .gallary .item,
+   .contact .address,
+   .contact .contact-data {
+      width: 100%;
+   }
+}
+
+@media (max-width: 575.98px) {
+   html {
+      font-size: 12px;
+   }
+
+
+   .title h2 {
+      font-size: 3.375rem;
+   }
+
+   .landing .layer .container h1 {
+      font-size: 25px;
+   }
+
+   .about .about-counter .item,
+   .services .services-area .card p,
+   .contact form input:nth-child(-n + 2) {
+      width: 100%;
+   }
+
+   .services .services-area .card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   .client .client-data {
+      flex-direction: column;
+   }
+
+   .copy-right .container {
+      flex-direction: column;
+   }
+
+   .copy-right .container a:first-of-type  {
+      margin-left: unset;
+   }
+}
